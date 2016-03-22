@@ -43,6 +43,7 @@ function getWinners(vote) {
 // as the starting point and explicitly remove 'vote' and 'entries' keys from it. The reason for this is future-proofing: 
 // At some point we might have some unrelated data in the state, and it should pass through this function unchanged. 
 // It is generally a good idea in these state transformation functions to always morph the old state into the new one instead of building the new state completely from scratch.
+
 export function next(state) {
 	const entries = state.get('entries')
 											 .concat(getWinners(state.get('vote')));

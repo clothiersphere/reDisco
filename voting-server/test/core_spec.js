@@ -65,10 +65,10 @@ describe('application logic', () => {
 				vote: Map({
 					pair: List.of('Sunshine', 'Millions')
 				}),
-				entries: List.of('127 Hours', 'Trainspottings')
+				entries: List.of('127 Hours', 'Trainspotting')
 			}));
 		});
-		it('puts both from tied vote back to entries' () => {
+		it('puts both from tied vote back to entries', () => {
 			const state = Map({
 				vote: Map({
 					pair: List.of('Trainspotting', '28 Days Later'),
@@ -80,14 +80,14 @@ describe('application logic', () => {
 				entries: List.of('Sunshine', 'Millions', '127 Hours')
 			});
 			const nextState = next(state);
-			expect(nextState.to.equal(Map({
+			expect(nextState).to.equal(Map({
 				vote: Map({
 					pair: List.of('Sunshine', 'Millions')
 				}),
 				entries: List.of('127 Hours', 'Trainspotting', '28 Days Later')
 			}));
 		});
-		it('marks winner when just one entry left'), () => {
+		it('marks winner when just one entry left', () => {
 			const state = Map({
 				vote: Map({
 					pair: List.of('Trainspotting', '28 Days Later'),
@@ -104,7 +104,7 @@ describe('application logic', () => {
 			}));
 		});
 
-	});
+});		
 
 	describe('vote', () => {
 		
