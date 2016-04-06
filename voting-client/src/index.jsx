@@ -4,6 +4,8 @@ import {Router, Route, hashHistory} from 'react-router';
 import App from './components/App';
 import {Voting} from './components/Voting';
 import Results from './components/Results';
+import Vote from './components/Vote';
+
 
 const pair = ['Trainspotting', '28 Days Later'];
 

@@ -20,6 +20,6 @@ export default React.createClass({
 					Next
 				</button>
 			</div>
-		</div>		
+		</div>;		
 	}
 });
